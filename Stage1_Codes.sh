@@ -61,7 +61,6 @@ ls
 mv qc_reads trimmed_reads
 ls
 
-
 #using BWA(to aligns relatively short sequences to a sequnce base):
 ls trimmed_reads
 touch reference.fasta
@@ -70,6 +69,7 @@ mkdir references
 mv reference.fasta references/
 bwa index references/reference.fasta
 ls references
+
 conda install -c bioconda bbmap
 repair.sh in1=trimmed_reads/Alsen_R1.fastq.gz in2=trimmed_reads/Alsen_R2.fastq.gz out1=Alsen_R1_rep.fastq.gz out2=Alsen_R2_rep.fastq.gz outsingle=single.fq
 repair.sh in1=trimmed_reads/Baxter_R1.fastq.gz in2=trimmed_reads/Baxter_R2.fastq.gz out1=Baxter_R1_rep.fastq.gz out2=Baxter_R2_rep.fastq.gz outsingle=single.fq
